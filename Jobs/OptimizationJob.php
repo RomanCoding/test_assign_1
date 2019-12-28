@@ -1,5 +1,10 @@
 <?php
 
+namespace App\Jobs;
+
+use App\DataSources\CampaignDataSource;
+use App\DataSources\EventsDataSource;
+
 class OptimizationJob
 {
     public function run()
@@ -13,7 +18,7 @@ class OptimizationJob
 
         /** @var Event $event */
         foreach ($eventsDS->getEventsSince("2 weeks ago") as $event) {
-            // START HERE
+            // write logic here
         }
 
     }
