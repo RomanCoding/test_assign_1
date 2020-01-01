@@ -7,6 +7,14 @@ class Event
     private $type;
     private $campaignId;
     private $publisherId;
+    private $ts; // not sure what is this field about, but let it be
+
+    public function __construct($type, $campaignId, $publisherId)
+    {
+        $this->type = $type;
+        $this->campaignId = $campaignId;
+        $this->publisherId = $publisherId;
+    }
 
     public function getType()
     {

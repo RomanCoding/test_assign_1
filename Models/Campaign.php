@@ -4,18 +4,29 @@ namespace App\Models;
 
 class Campaign
 {
-    /** @var  OptimizationProps $optProps */
+    /** @var OptimizationProps $optProps */
     private $optProps;
 
-    /** @var  int */
+    /** @var int */
     private $id;
 
-    /** @var  array */
+    /** @var array */
     private $publisherBlacklist;
+
+    public function __construct($id, OptimizationProps $optProps)
+    {
+        $this->id = $id;
+        $this->optProps = $optProps;
+    }
 
     public function getOptimizationProps()
     {
         return $this->optProps;
+    }
+
+    public function getId()
+    {
+        return $this->id;
     }
 
     public function getBlackList()
